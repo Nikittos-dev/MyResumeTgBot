@@ -1,5 +1,5 @@
 import telebot;
-bot = telebot.TeleBot('5725321305:AAHF04hPoBayamDudaFD17GI14VXHIVbj2s') # token bots
+bot = telebot.TeleBot('----------------------') # token bots
 from telebot import types
 import sqlite3
 
