@@ -23,13 +23,13 @@ def start(message):
                  button_menu = types.KeyboardButton('Меню')
                  markup.add(button_menu) #add button
                  bot.send_message(message.from_user.id,'Привет, {0.first_name}!'.format(message.from_user), reply_markup=markup)
-	         break
+	         
             else:
                  markup = types.ReplyKeyboardMarkup(resize_keyboard=True) 
                  hellopbtn = types.KeyboardButton("👋 Поздороваться и начать знакомство")
                  markup.add(hellopbtn)
                  bot.send_message(message.chat.id, text="Привет, {0.first_name}! Я тестовый бот ".format(message.from_user), reply_markup=markup)
-		 break
+		 
 
 def db_table_val(id_user: int ,user_name: str, user_surname: str, user_country: str, user_age: int, user_id_name: str ):#что будем запомнитать 
 	cursor.execute('INSERT INTO test (id_user, user_name, user_surname, user_country, user_age, user_id_name) VALUES (?, ?, ?, ?, ?, ?)', (id_user, user_name, user_surname, user_country, user_age, user_id_name))
